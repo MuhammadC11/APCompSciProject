@@ -1,0 +1,16 @@
+.search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40vw;
+  margin: 2rem auto;
+}
+#search-area {
+  width: 40vw;
+  height: 10vh;
+  font-size: 2rem;
+  margin: 3rem auto;
+}
+.submit-button {
+  font-size: 2rem;
+}

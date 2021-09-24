@@ -1,3 +1,4 @@
+@use "_search.scss";
 html,
 body {
   font-family: "Source Sans Pro", sans-serif;
@@ -13,5 +14,8 @@ body {
 .header {
   font-size: 5rem;
   margin: auto;
+  text-align: center;
+}
+.goswam {
   text-align: center;
 }
