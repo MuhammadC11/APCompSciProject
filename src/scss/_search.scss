@@ -14,3 +14,10 @@
 .submit-button {
   font-size: 2rem;
 }
+.search-header {
+  font-size: 7rem;
+  margin: 2rem auto 3rem auto;
+  text-align: center;
+  animation: load 1000ms ease-out;
+  -webkit-text-stroke: 3px rgb(255, 255, 255);
+}
