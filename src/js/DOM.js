@@ -1,5 +1,6 @@
 const DOMSelectors = {
   searchForm: document.getElementById("search-form"),
-  searchArea: document.getElementById("search-area"),
+  searchAreaDay: document.getElementById("search-area-day"),
+  searchAreaMonth: document.getElementById("search-area-month"),
 };
 export { DOMSelectors };
