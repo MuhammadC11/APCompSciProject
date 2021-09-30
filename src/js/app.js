@@ -1,9 +1,9 @@
 import { DOMSelectors } from "./DOM";
 console.log("Connected");
 
-fetch("https://byabbe.se/on-this-day/5/30/events.json")
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// fetch("https://byabbe.se/on-this-day/5/30/events.json")
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (event) {
@@ -25,23 +25,14 @@ const listen = function () {
           `https://byabbe.se/on-this-day/${searchParamsMonth}/${searchParamsDay}/events.json`
         );
         const data = await response.json();
+        console.log(data.date);
         if (data.length === 0) {
           alert("Whoops, looks like we couldn't find anything!");
         }
-        // data.forEach((games) => {
-        //   let storesArr = [];
-        //   const addStore = function () {
-        //     stores.forEach((element) => {
-        //       if (games.storeID.includes(element.id)) {
-        //         storesArr.push(element.name);
-        //         return storesArr;
-        //       }
-        //     });
-        //   };
-        //   addStore();
-        // });
+        data.forEach((history) => {
+          DOMSelectors;
+        });
         console.log(data);
-        console.log(data.length);
       } catch (error) {
         console.log(error);
         alert("Oops, something bad happened");
