@@ -1,11 +1,11 @@
 import { DOMSelectors } from "./DOM";
 console.log("Connected");
 
-fetch(
-  "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50&sortBy=Metacritic&pageSize=30&pageNumber=1"
-)
-  .then((response) => response.json())
-  .then((data) => console.log(data));
+// fetch(
+//   "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50&sortBy=Metacritic&pageSize=30&pageNumber=1"
+// )
+//   .then((response) => response.json())
+//   .then((data) => console.log(data));
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (event) {
@@ -31,6 +31,8 @@ const listen = function () {
 
         const data = await response.json();
         console.log(data.events);
+        const eventHistory = [];
+
         if (data.length === 0) {
           alert("Whoops, looks like we couldn't find anything!");
         }
@@ -94,37 +96,37 @@ const listen = function () {
       case "january":
         searchParamsMonth = "1";
         break;
-      case ("February", "february"):
+      case "february":
         searchParamsMonth = "2";
         break;
-      case ("March", "march"):
+      case "march":
         searchParamsMonth = "3";
         break;
-      case ("April", "april"):
+      case "april":
         searchParamsMonth = "4";
         break;
-      case ("May", "may"):
+      case "may":
         searchParamsMonth = "5";
         break;
-      case ("June", "june"):
+      case "june":
         searchParamsMonth = "6";
         break;
-      case ("July", "july"):
+      case "july":
         searchParamsMonth = "7";
         break;
-      case ("August", "august"):
+      case "august":
         searchParamsMonth = "8";
         break;
-      case ("September", "september"):
+      case "september":
         searchParamsMonth = "9";
         break;
-      case ("October", "october"):
+      case "october":
         searchParamsMonth = "10";
         break;
-      case ("November", "november"):
+      case "november":
         searchParamsMonth = "11";
         break;
-      case ("December", "december"):
+      case "december":
         searchParamsMonth = "12";
         break;
     }
