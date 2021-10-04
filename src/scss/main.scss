@@ -6,7 +6,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 92.5%;
-  color: rgb(22, 172, 157);
+  color: #2be3d1;
   height: 100vh;
   font-weight: 500;
   background: linear-gradient(90deg, #270054, #9d0998);
@@ -16,7 +16,7 @@ body {
   font-size: 6rem;
   margin: auto;
   text-align: center;
-  filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(3px 6px 9px black);
 }
 .goswam {
   text-align: center;
@@ -30,12 +30,12 @@ body {
 }
 #events-header {
   font-size: 4rem;
-  color: rgb(22, 172, 157);
+  color: #2be3d1;
   filter: drop-shadow(2px 2px 4px black);
 }
 .event {
   font-size: 3rem;
   color: white;
   margin: 3rem;
-  filter: drop-shadow(2px 4px 6px black);
+  filter: drop-shadow(2px 2px 2px black);
 }
