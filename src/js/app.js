@@ -1,11 +1,11 @@
 import { DOMSelectors } from "./DOM";
 console.log("Connected");
 
-// fetch(
-//   "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50&sortBy=Metacritic&pageSize=30&pageNumber=1"
-// )
-//   .then((response) => response.json())
-//   .then((data) => console.log(data));
+fetch(
+  "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50&sortBy=Metacritic&pageSize=30&pageNumber=1"
+)
+  .then((response) => response.json())
+  .then((data) => console.log(data));
 
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (event) {
@@ -32,11 +32,12 @@ const listen = function () {
         const data = await response.json();
         console.log(data.events);
         const eventHistory = [];
-
+        eventHistory.push(data.events);
+        console.log(eventHistory);
         if (data.length === 0) {
           alert("Whoops, looks like we couldn't find anything!");
         }
-        data.events.forEach((history) => {
+        eventHistory[0].forEach((history) => {
           DOMSelectors.events.insertAdjacentHTML(
             "beforeend",
             `<ul id="events-header">
@@ -48,6 +49,7 @@ const listen = function () {
           );
         });
         console.log(data);
+        data.events.push(eventHistory);
       } catch (error) {
         console.log(error);
         alert("Oops, something bad happened");
