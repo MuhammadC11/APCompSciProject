@@ -25,13 +25,14 @@ const listen = function () {
 
         const data = await response.json();
 
-        const eventHistory = [];
+        const eventHistory = [...data.events];
+
         eventHistory.push(data.events);
         console.log(eventHistory);
         if (data.length === 0) {
           alert("Whoops, looks like we couldn't find anything!");
         }
-        eventHistory[0].forEach((history) => {
+        eventHistory.forEach((history) => {
           DOMSelectors.events.insertAdjacentHTML(
             "beforeend",
             `<ul id="events-header">
@@ -42,8 +43,6 @@ const listen = function () {
         </ul>`
           );
         });
-
-        data.events.push(eventHistory);
       } catch (error) {
         console.log(error);
         alert("Oops, an error occurred, please check your spelling.");
