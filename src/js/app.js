@@ -1,12 +1,6 @@
 import { DOMSelectors } from "./DOM";
 console.log("Connected");
 
-fetch(
-  "https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=50&sortBy=Metacritic&pageSize=30&pageNumber=1"
-)
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
 const listen = function () {
   DOMSelectors.searchForm.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -30,7 +24,7 @@ const listen = function () {
         );
 
         const data = await response.json();
-        console.log(data.events);
+
         const eventHistory = [];
         eventHistory.push(data.events);
         console.log(eventHistory);
@@ -48,11 +42,11 @@ const listen = function () {
         </ul>`
           );
         });
-        console.log(data);
+
         data.events.push(eventHistory);
       } catch (error) {
         console.log(error);
-        alert("Oops, something bad happened");
+        alert("Oops, an error occurred, please check your spelling.");
       }
     };
 
