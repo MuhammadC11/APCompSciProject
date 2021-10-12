@@ -27,7 +27,6 @@ const listen = function () {
 
         const eventHistory = [...data.events];
 
-        eventHistory.push(data.events);
         console.log(eventHistory);
         if (data.length === 0) {
           alert("Whoops, looks like we couldn't find anything!");
