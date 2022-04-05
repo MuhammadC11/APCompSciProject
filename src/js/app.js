@@ -9,10 +9,7 @@ const listen = function () {
     console.log(searchParamsMonth);
     console.log(searchParamsDay);
 
-    if (
-      (DOMSelectors.searchAreaDay.value === "",
-      DOMSelectors.searchAreaMonth.value === "")
-    ) {
+    if ((searchParamsDay === "", searchParamsMonth === "")) {
       alert("Please Input Something To Get Your Desired Results");
       return;
     }
